@@ -22,5 +22,5 @@ RUN npm run build
 RUN npm install -g serve
 
 # Команда для запуска приложения
-CMD ["serve", "-l", "3000", "-s", "build"]
+CMD ["serve", "-l", "8080", "-s", "build"]
 

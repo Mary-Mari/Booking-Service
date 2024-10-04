@@ -11,12 +11,11 @@ async function bootstrap() {
   await app.listen(port);
 
   // Установка статических активов для сервировки из папки build
-  app.useStaticAssets(join(__dirname, '..', 'build'));
+  // app.useStaticAssets(join(__dirname, '..', 'build'));
 
   // Установка статических активов для сервировки из папки uploads
   app.useStaticAssets(join(__dirname, '..', 'uploads'), { prefix: '/public' });
 
   app.enableCors(); // Разрешение CORS
-  await app.listen(port);
 }
 bootstrap();
