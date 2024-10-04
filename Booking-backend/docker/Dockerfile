@@ -1,7 +1,7 @@
 # Dockerfile для бекенд-приложения (NestJS)
 
 # Используем официальный образ Node.js
-FROM node:22.1.2
+FROM node:20.17-alpine
 
 # Устанавливаем рабочую директорию
 WORKDIR /app

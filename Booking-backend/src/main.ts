@@ -8,7 +8,7 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   const configService = app.get(ConfigService);
   const port = configService.get('PORT') || 3000; // Задаем значение по умолчанию
-  await app.listen(port);
+
 
   // Установка статических активов для сервировки из папки build
   // app.useStaticAssets(join(__dirname, '..', 'build'));
@@ -17,5 +17,6 @@ async function bootstrap() {
   app.useStaticAssets(join(__dirname, '..', 'uploads'), { prefix: '/public' });
 
   app.enableCors(); // Разрешение CORS
+  await app.listen(port);
 }
 bootstrap();
