@@ -15,7 +15,7 @@
 
 Сначала клонируйте репозиторий на свою локальную машину:
 
-`git clone `
+`git clone https://github.com/Mary-Mari/Booking-Service.git`
 `cd booking-house/`
 
 ### 2. Запустите Docker
